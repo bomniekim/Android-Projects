@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Ex002Widget</string>
+    <string name="my_text">Hello world</string>
+</resources>

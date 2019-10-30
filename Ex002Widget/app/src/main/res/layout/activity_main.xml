@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aad0ff"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello world"
+        android:textSize="30sp"
+        android:textColor="#0000ff"
+        android:textStyle="bold|italic"
+        android:background="#FFFF00"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Nice Android"
+        android:background="@drawable/bg"/>
+
+    <!--  정렬  -->
+    <!-- gravity -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NICE"
+        android:background="#00FF00"
+        android:padding="8dp"
+        android:gravity="right"/>
+
+
+    <!-- layout_gravity -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ANDROID"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:layout_gravity="center"/>
+
+    <!-- 긴글 출력 -->
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요. 긴 글의 경우 한줄에 출력할 때 칸이 모자를 수 있음. 그럼 자동 줄바꿈 됨."
+        android:singleLine="true"
+        android:ellipsize="marquee"/>
+
+    <!-- AUTO링크   -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="http://www.naver.com"
+        android:autoLink="web"/>
+
+    <!-- 텍스트뷰에 보여질 글씨(String)을 XML로 지정하기   -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_text"/>
+
+
+</LinearLayout>
