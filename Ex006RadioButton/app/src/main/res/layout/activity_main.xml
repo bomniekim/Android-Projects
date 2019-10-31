@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_korea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KOREA"
+            android:checked="true"/>
+        <RadioButton
+            android:id="@+id/rb_japan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JAPAN"/>
+        <RadioButton
+            android:id="@+id/rb_china"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHINA"/>
+
+
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:onClick="clickOK"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESULT"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <RatingBar
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="7"
+        android:rating="3.5"
+        android:stepSize="0.5"/>
+
+</LinearLayout>
