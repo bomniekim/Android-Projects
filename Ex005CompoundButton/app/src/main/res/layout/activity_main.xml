@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/cb01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apple"
+        android:checked="true"/>
+    <!--처음부터 checked되어 있게 설정-->
+
+    <CheckBox
+        android:id="@+id/cb02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Orange"/>
+
+    <CheckBox
+        android:id="@+id/cb03"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Banana"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인"
+        android:onClick="clickBtn"/>
+
+    <ToggleButton
+        android:id="@+id/tb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="꺼짐"
+        android:textOn="켜짐"/>
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sound"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:text="result"/>
+    <!--사이즈 비율은 8의 배수를 권장-->
+</LinearLayout>
