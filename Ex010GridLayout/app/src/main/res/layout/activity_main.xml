@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!-- TableLayout의 미흡한 점을 개선하기 위해 만든 Layout. View들이 겹쳐지며   RowSpan, ColumnSpan 모두 가능함 -->
+    <!-- TableRow처럼 중첩구조가 아님   -->
+    <!--  Orientation을 통해 칸 개수 또는 줄 개수를 지정할 수 있음-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="horizontal"
+        android:columnCount="3">
+        <!--가로로 최대 3개까지만 추가되고 자동 줄바꿈되어 배치-->
+
+        <Button android:text="1"/>
+        <Button android:text="2"/>
+        <Button android:text="3"/>
+        <Button android:text="4"/>
+        <Button android:text="5"/>
+        <!-- 셀(뷰)의 사이즈를 조정하여도 다른 셀의 크기에 영향을 주지 않음-->
+        <Button android:text="6" android:layout_width="200dp"/> <!--혼자만 너비의 영향-->
+
+        <!-- 칸 위치(column)를 지정할 때 순서가 뒤바뀌어도 적용가능 -->
+        <Button android:text="7" android:layout_column="1"/>
+        <Button android:text="8" android:layout_column="0"/>
+
+        <!-- 줄 위치(row)를 지정하여 배치하는 것도 가능-->
+        <Button android:text="9" android:layout_row="3" android:layout_column="2"/>
+
+        <!-- 겹쳐질 수 있음 (9번과 같은 위치에 배치)-->
+        <Button android:text="10" android:layout_row="3" android:layout_column="2"/>
+
+        <!-- 셀 병합(columnSpan) -->
+        <!-- 병합은 되지만 공간만 차지하고 셀(View)의 크기는 변경되지 않음-->
+        <!-- 따라서 Layout_gravity를 통해 사이즈 지정-->
+        <Button android:text="11" android:layout_columnSpan="2" android:layout_gravity="fill_horizontal"/>
+
+        <!-- 줄 병합(rowSpan)-->
+        <!-- 병합은 되지만 공간만 차지하고 셀(View)의 크기는 변경되지 않음-->
+        <!-- 따라서 Layout_gravity를 통해 사이즈 지정-->
+        <Button android:text="12" android:layout_rowSpan="2" android:layout_gravity="fill_vertical"/>
+
+        <Button android:text="13"/>
+        <Button android:layout_column="2"/>
+    </GridLayout>
+
+    <!-- TableLayout과는 달리 StretchColumn이 없기에 균등 분할이 어려움 -->
+</RelativeLayout>
