@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+
+    <!-- ScrollView 안에는 오직 1개의 View만 배치할 수 있다   -->
+    <!--  여러 개를 추가하려면 Layout같은  ViewGroup을 놓고 그 안에 View들을 추가해야 함 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <!-- ScrollView 안에 있는 View의 height값은 어떻게 지정하든지
+        [무조건 wrap-content]로 지정됨      -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#FF0000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#0000FF"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#000000"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="#0000FF" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- 수평 ScrollView -->
+    <!-- Horizontal ScrollView 안에 있는 View의 width값은 어떻게 지정하든지
+    [무조건 wrap-content]로 지정됨      -->
+    <HorizontalScrollView
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="#0000FF"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="#000000"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="#FF0000"/>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <!-- 수평&수직 모두 Scroll 되게 하려면   중첩스크롤 구조로 만들면 됨 -->
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_marginTop="16dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg"/>
+
+
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="스크롤을 맨 아래로"
+        android:onClick="clickBtn"/>
+
+</LinearLayout>
