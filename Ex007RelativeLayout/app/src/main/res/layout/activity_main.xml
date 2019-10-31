@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼1"/>
+    <!--RelativeLayout 기본위치는 왼쪽상단-->
+    <!--기본적으로 View들이 겹쳐짐-->
+    <Button
+        android:id="@+id/btn02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼2"
+        android:layout_alignParentRight="true"/>
+    <!--부모의 오른쪽에 붙여!-->
+    <Button
+        android:id="@+id/btn03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼3"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/btn04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/btn05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼5"
+        android:layout_centerInParent="true" />
+    <Button
+        android:id="@+id/btn06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼6"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/btn07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼7"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    <Button
+        android:id="@+id/btn08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼8"
+        android:layout_below="@id/btn01"/>
+    <Button
+        android:id="@+id/btn09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="버튼9"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/btn03"/>
+    <Button
+        android:id="@+id/btn10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World"
+        android:layout_above="@id/btn05"
+        android:layout_alignLeft="@id/btn05"/>
+    <!--왼쪽을 같이 맞추기-->
+    <!-- 겹쳐서 배치할 때 특이점 -->
+    <!--나중에 만든 뷰가 기존 뷰를 덮어야 하지만 Button은 항상 최우선이 됨(클릭이 되어야하므로)-->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:background="#882322"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_foreground"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NICE!"/>
+        <!--우선시 되는 것은 Button과 Layout이므로 Hello World가 Nice보다 위에 배치-->
+        <!--부모들끼리 먼저 경쟁-->
+    </LinearLayout>
+    <!--이미지뷰가 나중에 있으면 위에 보여짐-->
+    <!--버튼만 특이하게 항상 최우선-->
+
+</RelativeLayout>
