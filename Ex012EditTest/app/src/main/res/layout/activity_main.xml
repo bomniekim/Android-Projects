@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- inputType 속성 주요 설정값 : 소프트키패드의 종류를 결정  -->
+    <!-- "text" : 문자키보드 , 한줄만 입력가능   -->
+    <!-- "textMultiLine" : 여러줄 입력가능  -->
+    <!-- "number" : 숫자키보드  -->
+    <!-- "phone" : 전화번호(다이얼)키보드  -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="input data"
+        android:inputType="phone"/>
+
+    <!-- multiLine 의 뷰 높이 관련   -->
+    <!-- 라인수 관련(뷰 높이사이즈 관련) 속성  -->
+    <!-- 1. lines 속성 : 처음 화면에 보이는 EditText의 높이가 3줄 높이로 됨. 단, 3줄이상 입력은 가능함. 대신 높이가 더이상 커지지 않음.  -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:gravity="top"/>
+
+    <!-- 2. maxLines : 처음 화면에 보일때는 한줄로 보임. 줄바꿈해보면 3줄까지 높이가 늘어나고 그 이상은 스크롤 됨.  -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:hint="input multiLine : maxLines속성"
+        android:maxLines="3"/>
+
+    <!-- EditText에 이미지 삽입 -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:drawableRight="@drawable/ic_favorite_blue_24dp"/>
+
+    <!-- EditText의 커서 안보이기   -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="no cursor"
+        android:cursorVisible="false"/>
+
+    <!-- width값을 글자수로 지정하기   -->
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"/>
+
+    <!-- 배경을 바꾸면 언더라인이 없어짐  -->
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:background="#008800"
+        android:textColor="#FFFFFF"
+        android:padding="8dp"
+        android:gravity="top"/>
+
+    <!-- EditText의 포커스 자동 이동   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="3"
+            android:inputType="number"
+            android:maxLength="3"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/et02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:inputType="number"
+            android:maxLength="4"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/et03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:inputType="number"
+            android:maxLength="4"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show"
+        android:onClick="clickShow"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hide"
+        android:onClick="clickHide"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="toggle"
+        android:onClick="clickToggle"/>
+
+
+
+</LinearLayout>
