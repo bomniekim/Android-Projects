@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        //XML에서 만든 TextView를 참조하여 제어하기
+        // XML에서 만든 TextView를 참조하여 제어하기
+        //
         TextView tv= findViewById(R.id.tv);
         tv.setSelected(true);
     }
